@@ -1,0 +1,38 @@
+$color-white: white !default;
+$color-black: black !default;
+$color-jade: #19ab6e !default;
+$color-kelly-green: #52c41a !default;
+$color-chinese-yellow: #faad14 !default;
+$color-tart-orange: #ff4d4f !default;
+
+$color-primary: $color-jade;
+$color-success: $color-kelly-green;
+$color-warning: $color-chinese-yellow;
+$color-danage: $color-tart-orange;
+
+$mix-primary-percent: 16.8%;
+$color-primary-light-1: mix($color-white, $color-primary, $mix-primary-percent) !default;
+$color-primary-light-2: mix($color-white, $color-primary, $mix-primary-percent*2) !default;
+$color-primary-light-3: mix($color-white, $color-primary, $mix-primary-percent*3) !default;
+$color-primary-light-4: mix($color-white, $color-primary, $mix-primary-percent*4) !default;
+$color-primary-light-5: mix($color-white, $color-primary, $mix-primary-percent*5) !default;
+$color-primary-dark-1: mix($color-black, $color-primary, $mix-primary-percent) !default;
+$color-primary-dark-2: mix($color-black, $color-primary, $mix-primary-percent*2) !default;
+$color-primary-dark-3: mix($color-black, $color-primary, $mix-primary-percent*3) !default;
+$color-primary-dark-4: mix($color-black, $color-primary, $mix-primary-percent*4) !default;
+$color-primary-dark-5: mix($color-black, $color-primary, $mix-primary-percent*5) !default;
+
+$mix-neutral-percent: 7.6%;
+$color-neutral-1: mix($color-white, $color-black, $mix-neutral-percent*13);
+$color-neutral-2: mix($color-white, $color-black, $mix-neutral-percent*12);
+$color-neutral-3: mix($color-white, $color-black, $mix-neutral-percent*11);
+$color-neutral-4: mix($color-white, $color-black, $mix-neutral-percent*10);
+$color-neutral-5: mix($color-white, $color-black, $mix-neutral-percent*9);
+$color-neutral-6: mix($color-white, $color-black, $mix-neutral-percent*8);
+$color-neutral-7: mix($color-white, $color-black, $mix-neutral-percent*7);
+$color-neutral-8: mix($color-white, $color-black, $mix-neutral-percent*6);
+$color-neutral-9: mix($color-white, $color-black, $mix-neutral-percent*5);
+$color-neutral-10: mix($color-white, $color-black, $mix-neutral-percent*4);
+$color-neutral-11: mix($color-white, $color-black, $mix-neutral-percent*3);
+$color-neutral-12: mix($color-white, $color-black, $mix-neutral-percent*2);
+$color-neutral-13: mix($color-white, $color-black, $mix-neutral-percent);

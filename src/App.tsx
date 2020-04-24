@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+// import Button from './components/button/button'
+import './style.scss'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="color-pannel">
+        {
+          [5, 4, 3, 2, 1].map(i => (
+            <div className={`color-primary-light-${i}`}>
+              light-{i}
+            </div>
+          ))
+        }
+        <div className={`color-primary`}>
+          primary
+        </div>
+        {
+          [1, 2, 3, 4, 5].map(i => (
+            <div className={`color-primary-dark-${i}`}>
+              dark-{i}
+            </div>
+          ))
+        }
+      </div>
+      <div className="color-pannel">
+        {
+          [1,2,3,4,5,6,7,8,9,10,11,12,13].map(i => (
+          <div className={`color-neutral-${i}`}>neutral-{i}</div>
+          ))
+        }
+      </div>
+    </>
   );
 }
 
