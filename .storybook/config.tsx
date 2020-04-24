@@ -3,9 +3,6 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
 import '../src/styles/index.scss'
-const wrapperStyle: React.CSSProperties = {
-  padding: '20px 40px'
-}
 
 const storyWrapper = (stroyFn: any) => (
   <div>
@@ -24,6 +21,6 @@ const loaderFn = () => {
 };
 
 
-// automatically import all files ending in *.stories.js
+// automatically import all files ending in *.stories.tsx
 configure(loaderFn, module);
 

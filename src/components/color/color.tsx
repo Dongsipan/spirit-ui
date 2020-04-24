@@ -28,6 +28,11 @@ function Color() {
           ))
         }
       </div>
+      <div className="color-pannel">
+        <div className="color-success">success</div>
+        <div className="color-warning">warning</div>
+        <div className="color-error">error</div>
+      </div>
     </>
   );
 }

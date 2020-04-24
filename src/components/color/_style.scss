@@ -1,7 +1,7 @@
 .color-pannel {
   display: flex;
   margin: 20px;
-
+  box-shadow: shadow-2('down');
   div {
     height: 50px;
     width: 100px;
@@ -16,26 +16,43 @@
 
   @for $i from 1 through 5 {
     .color-primary-light-#{$i} {
-      background-color: mix($color-white, $color-primary, 16.8%*$i);
+      background-color: mix($color-white, $color-primary, 16.8% * $i);
     }
   }
 
   @for $i from 1 through 5 {
     .color-primary-dark-#{$i} {
-      background-color: mix($color-black, $color-primary, 16.8%*$i);
+      background-color: mix($color-black, $color-primary, 16.8% * $i);
     }
   }
 
   @for $i from 1 through 13 {
     .color-neutral-#{$i} {
-      background-color: mix($color-white, $color-black, 7.6%*(14-$i));
+      background-color: mix($color-white, $color-black, 7.6% * (14-$i));
     }
   }
 
   div[class^="color-primary-dark-"] {
     color: $color-white;
   }
-  .color-neutral-8,.color-neutral-9,.color-neutral-10,.color-neutral-11,.color-neutral-12,.color-neutral-13 {
+  .color-neutral-8,
+  .color-neutral-9,
+  .color-neutral-10,
+  .color-neutral-11,
+  .color-neutral-12,
+  .color-neutral-13,
+  .color-success,
+  .color-warning,
+  .color-error {
     color: $color-white;
+  }
+  .color-success {
+    background-color: $color-success;
+  }
+  .color-warning {
+    background-color: $color-warning;
+  }
+  .color-error {
+    background-color: $color-error;
   }
 }

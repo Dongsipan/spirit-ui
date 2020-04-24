@@ -1,3 +1,4 @@
+// 自然色
 $color-white: white !default;
 $color-black: black !default;
 $color-jade: #19ab6e !default;
@@ -5,11 +6,13 @@ $color-kelly-green: #52c41a !default;
 $color-chinese-yellow: #faad14 !default;
 $color-tart-orange: #ff4d4f !default;
 
-$color-primary: $color-jade;
-$color-success: $color-kelly-green;
-$color-warning: $color-chinese-yellow;
-$color-danage: $color-tart-orange;
+// 功能色
+$color-primary: $color-jade !default;
+$color-success: $color-kelly-green !default;
+$color-warning: $color-chinese-yellow !default;
+$color-error: $color-tart-orange !default;
 
+// 主题色
 $mix-primary-percent: 16.8%;
 $color-primary-light-1: mix($color-white, $color-primary, $mix-primary-percent) !default;
 $color-primary-light-2: mix($color-white, $color-primary, $mix-primary-percent*2) !default;
@@ -22,17 +25,92 @@ $color-primary-dark-3: mix($color-black, $color-primary, $mix-primary-percent*3)
 $color-primary-dark-4: mix($color-black, $color-primary, $mix-primary-percent*4) !default;
 $color-primary-dark-5: mix($color-black, $color-primary, $mix-primary-percent*5) !default;
 
+
+// 中性色
 $mix-neutral-percent: 7.6%;
-$color-neutral-1: mix($color-white, $color-black, $mix-neutral-percent*13);
-$color-neutral-2: mix($color-white, $color-black, $mix-neutral-percent*12);
-$color-neutral-3: mix($color-white, $color-black, $mix-neutral-percent*11);
-$color-neutral-4: mix($color-white, $color-black, $mix-neutral-percent*10);
-$color-neutral-5: mix($color-white, $color-black, $mix-neutral-percent*9);
-$color-neutral-6: mix($color-white, $color-black, $mix-neutral-percent*8);
-$color-neutral-7: mix($color-white, $color-black, $mix-neutral-percent*7);
-$color-neutral-8: mix($color-white, $color-black, $mix-neutral-percent*6);
-$color-neutral-9: mix($color-white, $color-black, $mix-neutral-percent*5);
-$color-neutral-10: mix($color-white, $color-black, $mix-neutral-percent*4);
-$color-neutral-11: mix($color-white, $color-black, $mix-neutral-percent*3);
-$color-neutral-12: mix($color-white, $color-black, $mix-neutral-percent*2);
-$color-neutral-13: mix($color-white, $color-black, $mix-neutral-percent);
+$color-neutral-1: mix($color-white, $color-black, $mix-neutral-percent*13) !default;
+$color-neutral-2: mix($color-white, $color-black, $mix-neutral-percent*12) !default;
+$color-neutral-3: mix($color-white, $color-black, $mix-neutral-percent*11) !default;
+$color-neutral-4: mix($color-white, $color-black, $mix-neutral-percent*10) !default;
+$color-neutral-5: mix($color-white, $color-black, $mix-neutral-percent*9) !default;
+$color-neutral-6: mix($color-white, $color-black, $mix-neutral-percent*8) !default;
+$color-neutral-7: mix($color-white, $color-black, $mix-neutral-percent*7) !default;
+$color-neutral-8: mix($color-white, $color-black, $mix-neutral-percent*6) !default;
+$color-neutral-9: mix($color-white, $color-black, $mix-neutral-percent*5) !default;
+$color-neutral-10: mix($color-white, $color-black, $mix-neutral-percent*4) !default;
+$color-neutral-11: mix($color-white, $color-black, $mix-neutral-percent*3) !default;
+$color-neutral-12: mix($color-white, $color-black, $mix-neutral-percent*2) !default;
+$color-neutral-13: mix($color-white, $color-black, $mix-neutral-percent) !default;
+
+
+// 文字色
+$color-text-title: $color-neutral-12 !default;
+$color-text-primary: $color-neutral-10 !default;
+$color-text-secondary: $color-neutral-8 !default;
+$color-text-disabled: $color-neutral-4 !default;
+
+
+// 边框色
+$color-border: $color-neutral-2 !default;
+
+
+// 分割线
+$color-divider: $color-neutral-1 !default;
+
+
+// 字体
+$font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
+
+// 字号
+$font-size-extra-small: 12px; // 辅助文字
+$font-size-small: 13px; // 正文（小）
+$font-size-base: 14px; // 正文
+$font-size-medium: 16px; // 小标题
+$font-size-large: 18px; // 标题
+$font-size-extra-large: 20px; // 主标题
+
+
+// 阴影
+$shadow-color16: rgba(0, 0, 0, 0.16);
+$shadow-color12: rgba(0, 0, 0, 0.12);
+$shadow-color9: rgba(0, 0, 0, 0.09);
+$shadow-color8: rgba(0, 0, 0, 0.08);
+$shadow-color5: rgba(0, 0, 0, 0.05);
+$shadow-color3: rgba(0, 0, 0, 0.03);
+
+$shadow-1-up: 0px -1px 2px -2px $shadow-color16, 0px -3px 6px 0px $shadow-color12, 0px -5px	12px 4px $shadow-color9;
+$shadow-1-down: 0px 1px 2px	-2px $shadow-color16, 0px 3px 6px 0px $shadow-color12, 0px 5px 12px 4px $shadow-color9;
+$shadow-1-left: -1px 0px 2px -2px $shadow-color16, -3px 0px 6px 0px $shadow-color12, -5px 0px 12px 4px $shadow-color9;
+$shadow-1-right: 1px 0px 2px -2px $shadow-color16, 3px 0px 6px 0px $shadow-color12, 5px 0px 12px 4px $shadow-color9;
+
+$shadow-2-up: 0px 3px 6px -4px $shadow-color12, 0px -6px 16px 0px $shadow-color8, 0px -9px 28px 8px $shadow-color5;
+$shadow-2-down: 0px 3px 6px -4px $shadow-color12, 0px 6px 16px 0px $shadow-color8, 0px 9px 28px 8px $shadow-color5;
+$shadow-2-left: -3px 0px 6px -4px $shadow-color12, 6px 0px 16px 0px $shadow-color8, -9px 0px 6px -4px $shadow-color5;
+$shadow-2-right: 3px 0px 6px -4px $shadow-color12, 6px 0px 16px 0px $shadow-color8, 9px 0px 28px 8px $shadow-color5;
+
+$shadow-3-up: 0px -6px 16px -8px $shadow-color8, 0px -9px 28px 0px $shadow-color5, 0px -12px 48px 16px $shadow-color3;
+$shadow-3-down: 0px 6px 16px -8px $shadow-color8, 0px 9px 28px 0px $shadow-color5, 0px 12px 48px 16px $shadow-color3;
+$shadow-3-left: -6px 0px 16px -8px $shadow-color8, -9px 0px 28px 0px $shadow-color5, -12px 0px 48px 16px $shadow-color3;
+$shadow-3-right: 6px 0px 16px -8px $shadow-color8, 9px 0px 28px 0px $shadow-color5, 12px 0px 48px 16px $shadow-color3;
+
+$shadow-level-1: (
+  up: $shadow-1-up,
+  down: $shadow-1-down,
+  left: $shadow-1-left,
+  right: $shadow-1-right
+);
+
+$shadow-level-2: (
+  up: $shadow-2-up,
+  down: $shadow-2-down,
+  left: $shadow-2-left,
+  right: $shadow-2-right
+);
+
+$shadow-level-3: (
+  up: $shadow-3-up,
+  down: $shadow-3-down,
+  left: $shadow-3-left,
+  right: $shadow-3-right
+);
