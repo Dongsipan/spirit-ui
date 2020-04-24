@@ -1,7 +1,5 @@
 import React from 'react';
-// import Button from './components/button/button'
-import './style.scss'
-function App() {
+function Color() {
   return (
     <>
       <div className="color-pannel">
@@ -25,8 +23,8 @@ function App() {
       </div>
       <div className="color-pannel">
         {
-          [1,2,3,4,5,6,7,8,9,10,11,12,13].map(i => (
-          <div className={`color-neutral-${i}`}>neutral-{i}</div>
+          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map(i => (
+            <div className={`color-neutral-${i}`}>neutral-{i}</div>
           ))
         }
       </div>
@@ -34,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default Color;
