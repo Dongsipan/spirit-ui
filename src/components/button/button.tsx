@@ -1,6 +1,7 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
+import classNames from 'classnames';
 
-export type ButtonSize = 'large' | 'normal' | 'small' | 'small'
+export type ButtonSize = 'large' | 'normal' | 'small' | 'mini'
 export type ButtonType = 'primary' | 'default' | 'success' | 'warning' | 'danger' | 'link'
 
 interface BaseButtonProps {
@@ -19,9 +20,41 @@ interface BaseButtonProps {
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
+
 export const Button: FC<ButtonProps> = props => {
+  const {
+    className,
+    loading,
+    disabled,
+    size,
+    btnType,
+    children,
+    href,
+    ...restProps
+  } = props
+
+  const classes = classNames('spirit-button', `is-${btnType}`)
+
+  if (btnType === 'link' && href) {
+    return (
+      <a className={classes} href={href} {...restProps}>{children}</a>
+    );
+  }
   return (
-    <button>button</button>
-  )
+    <button
+      className={classes}
+      disabled={disabled}
+      {...restProps}
+    >
+      {children}
+    </button>
+  );
 }
-export default Button
+
+Button.defaultProps = {
+  loading: false,
+  disabled: false,
+  btnType: 'default'
+}
+
+export default Button;

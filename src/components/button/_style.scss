@@ -1,0 +1,58 @@
+$btn-bg-color: $color-primary;
+$btn-hover-bg: $color-primary-light-1;
+$btn-active-bg: $color-primary-dark-2;
+
+%btn {
+  padding: 4px 15px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &+.spirit-button {
+    margin-left: $margin-md;
+  }
+}
+
+%default {
+  color: $color-text-secondary;
+  border-color: $border-color;
+  background-color: $color-white;
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+  &:focus {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+  &:active {
+    color: $color-primary-dark-1;
+    border-color: $color-primary-dark-2;
+  }
+}
+
+%primary {
+  color: $color-white;
+  background-color: $btn-bg-color;
+  &:hover {
+    background-color: $btn-hover-bg;
+  }
+  &:focus {
+    background-color: $btn-bg-color;
+  }
+  &:active {
+    background-color: $btn-active-bg;
+  }
+}
+
+@include b(button) {
+  @extend %btn;
+  @include when(default) {
+    @extend %default;
+  }
+  @include when(primary) {
+    @extend %primary;
+  }
+}
