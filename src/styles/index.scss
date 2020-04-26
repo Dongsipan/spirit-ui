@@ -1,3 +1,7 @@
 @import "variables";
-@import "functions";
+@import "core/functions/shadow";
+@import "core/mixins/config";
+@import "core/mixins/clearfix";
+@import "core/mixins/bem";
+@import "core/mixins/when";
 @import "../components/color/style";

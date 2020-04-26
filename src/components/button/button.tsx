@@ -1,10 +1,12 @@
 import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 
-export type ButtonSize = 'lg' | 'sm'
-export type ButtonType = 'primary' | 'default' | 'danger' | 'link'
+export type ButtonSize = 'large' | 'normal' | 'small' | 'small'
+export type ButtonType = 'primary' | 'default' | 'success' | 'warning' | 'danger' | 'link'
 
 interface BaseButtonProps {
   className?: string;
+  /** 设置 Button 状态 */
+  loading?: boolean;
   /**设置 Button 的禁用 */
   disabled?: boolean;
   /**设置 Button 的尺寸 */

@@ -147,41 +147,6 @@ $shadow-color8: rgba(0, 0, 0, 0.08) !default;
 $shadow-color5: rgba(0, 0, 0, 0.05) !default;
 $shadow-color3: rgba(0, 0, 0, 0.03) !default;
 
-$shadow-1-up: 0px -1px 2px -2px $shadow-color16, 0px -3px 6px 0px $shadow-color12, 0px -5px 12px 4px $shadow-color9 !default;
-$shadow-1-down: 0px 1px 2px -2px $shadow-color16, 0px 3px 6px 0px $shadow-color12, 0px 5px 12px 4px $shadow-color9 !default;
-$shadow-1-left: -1px 0px 2px -2px $shadow-color16, -3px 0px 6px 0px $shadow-color12, -5px 0px 12px 4px $shadow-color9 !default;
-$shadow-1-right: 1px 0px 2px -2px $shadow-color16, 3px 0px 6px 0px $shadow-color12, 5px 0px 12px 4px $shadow-color9 !default;
-
-$shadow-2-up: 0px 3px 6px -4px $shadow-color12, 0px -6px 16px 0px $shadow-color8, 0px -9px 28px 8px $shadow-color5 !default;
-$shadow-2-down: 0px 3px 6px -4px $shadow-color12, 0px 6px 16px 0px $shadow-color8, 0px 9px 28px 8px $shadow-color5 !default;
-$shadow-2-left: -3px 0px 6px -4px $shadow-color12, 6px 0px 16px 0px $shadow-color8, -9px 0px 6px -4px $shadow-color5 !default;
-$shadow-2-right: 3px 0px 6px -4px $shadow-color12, 6px 0px 16px 0px $shadow-color8, 9px 0px 28px 8px $shadow-color5 !default;
-
-$shadow-3-up: 0px -6px 16px -8px $shadow-color8, 0px -9px 28px 0px $shadow-color5, 0px -12px 48px 16px $shadow-color3 !default;
-$shadow-3-down: 0px 6px 16px -8px $shadow-color8, 0px 9px 28px 0px $shadow-color5, 0px 12px 48px 16px $shadow-color3 !default;
-$shadow-3-left: -6px 0px 16px -8px $shadow-color8, -9px 0px 28px 0px $shadow-color5, -12px 0px 48px 16px $shadow-color3 !default;
-$shadow-3-right: 6px 0px 16px -8px $shadow-color8, 9px 0px 28px 0px $shadow-color5, 12px 0px 48px 16px $shadow-color3 !default;
-
-$shadow-level-1: (
-  up: $shadow-1-up,
-  down: $shadow-1-down,
-  left: $shadow-1-left,
-  right: $shadow-1-right
-);
-
-$shadow-level-2: (
-  up: $shadow-2-up,
-  down: $shadow-2-down,
-  left: $shadow-2-left,
-  right: $shadow-2-right
-);
-
-$shadow-level-3: (
-  up: $shadow-3-up,
-  down: $shadow-3-down,
-  left: $shadow-3-left,
-  right: $shadow-3-right
-);
 
 // 动画
 $ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1) !default;
