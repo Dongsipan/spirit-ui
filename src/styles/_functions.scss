@@ -4,7 +4,7 @@
     @return map-get($shadow-level-1, $name);
   }
 
-  @warn "The key #{$name} is not in the map '$shadow-level-1'";
+  @warn "The key of '#{$name}' is not in the map '$shadow-level-1'";
   @return null;
 }
 
@@ -13,7 +13,7 @@
     @return map-get($shadow-level-2, $name);
   }
 
-  @warn "The key #{$name} is not in the map '$shadow-level-2'";
+  @warn "The key of '#{$name}' is not in the map '$shadow-level-2'";
   @return null;
 }
 
@@ -22,6 +22,20 @@
     @return map-get($shadow-level-3, $name);
   }
 
-  @warn "The key #{$name} is not in the map '$shadow-level-3'";
+  @warn "The key of '#{$name}' is not in the map '$shadow-level-3'";
+  @return null;
+}
+
+@function shadow($level, $name) {
+  @if $level == 1 {
+    @return shadow-1($name);
+  }
+  @if $level == 2 {
+    @return shadow-2($name);
+  }
+  @if $level == 3 {
+    @return shadow-3($name);
+  }
+  @warn "'$shadow-level-#{$level}' is not in the map ";
   @return null;
 }

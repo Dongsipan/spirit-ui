@@ -1,7 +1,7 @@
-.color-pannel {
+.color-panel {
   display: flex;
   margin: 20px;
-  box-shadow: shadow-2('down');
+  box-shadow: shadow(2, up);
   div {
     height: 50px;
     width: 100px;
