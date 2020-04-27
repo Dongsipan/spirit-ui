@@ -1,7 +1,3 @@
-$btn-bg-color: $color-primary;
-$btn-hover-bg: $color-primary-light-1;
-$btn-active-bg: $color-primary-dark-2;
-
 %btn {
   padding: 4px 15px;
   border: 1px solid transparent;
@@ -16,34 +12,76 @@ $btn-active-bg: $color-primary-dark-2;
 }
 
 %default {
-  color: $color-text-secondary;
+  color: $btn-default-text;
   border-color: $border-color;
-  background-color: $color-white;
+  background-color: $btn-default-bg-color;
   &:hover {
-    color: $color-primary;
-    border-color: $color-primary;
+    color: $btn-default-hover-bg;
+    border-color: $btn-default-hover-bg;
   }
   &:focus {
-    color: $color-primary;
-    border-color: $color-primary;
+    color: $btn-default-hover-bg;
+    border-color: $btn-default-hover-bg;
   }
   &:active {
-    color: $color-primary-dark-1;
-    border-color: $color-primary-dark-2;
+    color: $btn-default-active-bg;
+    border-color: $btn-default-active-bc;
   }
 }
 
 %primary {
-  color: $color-white;
-  background-color: $btn-bg-color;
+  color: $btn-text;
+  background-color: $btn-primary-bg-color;
   &:hover {
-    background-color: $btn-hover-bg;
+    background-color: $btn-primary-hover-bg;
   }
   &:focus {
-    background-color: $btn-bg-color;
+    background-color: $btn-primary-bg-color;
   }
   &:active {
-    background-color: $btn-active-bg;
+    background-color: $btn-primary-active-bg;
+  }
+}
+
+%success {
+  color: $btn-text;
+  background-color: $btn-success-bg-color;
+  &:hover {
+    background-color: $btn-success-hover-bg;
+  }
+  &:focus {
+    background-color: $btn-success-bg-color;
+  }
+  &:active {
+    background-color: $btn-success-active-bg;
+  }
+}
+
+%warning {
+  color: $btn-text;
+  background-color: $btn-warning-bg-color;
+  &:hover {
+    background-color: $btn-warning-hover-bg;
+  }
+  &:focus {
+    background-color: $btn-warning-bg-color;
+  }
+  &:active {
+    background-color: $btn-warning-active-bg;
+  }
+}
+
+%danger {
+  color: $btn-text;
+  background-color: $btn-danger-bg-color;
+  &:hover {
+    background-color: $btn-danger-hover-bg;
+  }
+  &:focus {
+    background-color: $btn-danger-bg-color;
+  }
+  &:active {
+    background-color: $btn-danger-active-bg;
   }
 }
 
@@ -54,5 +92,14 @@ $btn-active-bg: $color-primary-dark-2;
   }
   @include when(primary) {
     @extend %primary;
+  }
+  @include when(success) {
+    @extend %success;
+  }
+  @include when(warning) {
+    @extend %warning;
+  }
+  @include when(danger) {
+    @extend %danger;
   }
 }

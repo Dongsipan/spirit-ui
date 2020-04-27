@@ -12,44 +12,21 @@ $color-tart-orange: #ff4d4f !default;
 $color-primary: $color-jade !default;
 $color-success: $color-kelly-green !default;
 $color-warning: $color-chinese-yellow !default;
-$color-error: $color-tart-orange !default;
+$color-danger: $color-tart-orange !default;
 
 // 主题色
-$mix-primary-percent: 16.8%;
-$color-primary-light-1: mix($color-white, $color-primary, $mix-primary-percent) !default;
-$color-primary-light-2: mix($color-white, $color-primary, $mix-primary-percent*2) !default;
-$color-primary-light-3: mix($color-white, $color-primary, $mix-primary-percent*3) !default;
-$color-primary-light-4: mix($color-white, $color-primary, $mix-primary-percent*4) !default;
-$color-primary-light-5: mix($color-white, $color-primary, $mix-primary-percent*5) !default;
-$color-primary-dark-1: mix($color-black, $color-primary, $mix-primary-percent) !default;
-$color-primary-dark-2: mix($color-black, $color-primary, $mix-primary-percent*2) !default;
-$color-primary-dark-3: mix($color-black, $color-primary, $mix-primary-percent*3) !default;
-$color-primary-dark-4: mix($color-black, $color-primary, $mix-primary-percent*4) !default;
-$color-primary-dark-5: mix($color-black, $color-primary, $mix-primary-percent*5) !default;
-
-
-// 中性色
-$mix-neutral-percent: 7.6%;
-$color-neutral-1: mix($color-white, $color-black, $mix-neutral-percent*13) !default;
-$color-neutral-2: mix($color-white, $color-black, $mix-neutral-percent*12) !default;
-$color-neutral-3: mix($color-white, $color-black, $mix-neutral-percent*11) !default;
-$color-neutral-4: mix($color-white, $color-black, $mix-neutral-percent*10) !default;
-$color-neutral-5: mix($color-white, $color-black, $mix-neutral-percent*9) !default;
-$color-neutral-6: mix($color-white, $color-black, $mix-neutral-percent*8) !default;
-$color-neutral-7: mix($color-white, $color-black, $mix-neutral-percent*7) !default;
-$color-neutral-8: mix($color-white, $color-black, $mix-neutral-percent*6) !default;
-$color-neutral-9: mix($color-white, $color-black, $mix-neutral-percent*5) !default;
-$color-neutral-10: mix($color-white, $color-black, $mix-neutral-percent*4) !default;
-$color-neutral-11: mix($color-white, $color-black, $mix-neutral-percent*3) !default;
-$color-neutral-12: mix($color-white, $color-black, $mix-neutral-percent*2) !default;
-$color-neutral-13: mix($color-white, $color-black, $mix-neutral-percent) !default;
+$color-primary-map: getSeriesMap($color-primary);
+$color-success-map: getSeriesMap($color-success);
+$color-warning-map: getSeriesMap($color-warning);
+$color-danger-map: getSeriesMap($color-danger);
+$color-neutral-map: getNeutralMap();
 
 
 // 文字色
-$color-text-title: $color-neutral-12 !default;
-$color-text-primary: $color-neutral-10 !default;
-$color-text-secondary: $color-neutral-8 !default;
-$color-text-disabled: $color-neutral-4 !default;
+$color-text-title: map-get($color-neutral-map, 12) !default;
+$color-text-primary: map-get($color-neutral-map, 10) !default;
+$color-text-secondary: map-get($color-neutral-map, 8) !default;
+$color-text-disabled: map-get($color-neutral-map, 4) !default;
 
 
 // 背景色
@@ -65,13 +42,13 @@ $body-text-align: null !default;
 
 // 边框
 $border-width: 1px !default;
-$border-color: $color-neutral-2 !default;
+$border-color: map-get($color-neutral-map, 2) !default;
 $border-style-base: solid !default;
 $border-radius-base: 2px !default;
 $border-radius-sm: $border-radius-base !default;
 
 // 分割线
-$divider-color: $color-neutral-1 !default;
+$divider-color: map-get($color-neutral-map, 1) !default;
 
 
 // 字体
@@ -163,3 +140,27 @@ $ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86) !default;
 $ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
 $ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
 $ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+
+// button 组件
+$btn-default-text: $color-text-secondary;
+$btn-default-bg-color: $color-white;
+$btn-default-hover-bg: $color-primary;
+$btn-default-active-bg: map-get($color-primary-map, dark-1);
+$btn-default-active-bc: map-get($color-primary-map, dark-2);
+
+$btn-text: $color-white;
+$btn-primary-bg-color: $color-primary;
+$btn-primary-hover-bg: map-get($color-primary-map, light-1);
+$btn-primary-active-bg: map-get($color-primary-map, dark-2);
+
+$btn-success-bg-color: $color-success;
+$btn-success-hover-bg: map-get($color-success-map, light-1);
+$btn-success-active-bg: map-get($color-success-map, dark-2);
+
+$btn-warning-bg-color: $color-warning;
+$btn-warning-hover-bg: map-get($color-warning-map, light-1);
+$btn-warning-active-bg: map-get($color-warning-map, dark-2);
+
+$btn-danger-bg-color: $color-danger;
+$btn-danger-hover-bg: map-get($color-danger-map, light-1);
+$btn-danger-active-bg: map-get($color-danger-map, dark-2);
