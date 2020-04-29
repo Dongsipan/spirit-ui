@@ -1,5 +1,6 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes, useRef } from 'react';
 import classNames from 'classnames';
+import useWave from '../../hooks/useWave';
 
 export type ButtonSize = 'large' | 'normal' | 'small' | 'mini'
 export type ButtonType = 'primary' | 'default' | 'success' | 'warning' | 'danger' | 'link'
@@ -15,6 +16,7 @@ interface BaseButtonProps {
   /**设置 Button 的类型 */
   btnType?: ButtonType;
   children: React.ReactNode;
+  /**设置 Button 的 href */
   href?: string;
 }
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
@@ -33,7 +35,17 @@ export const Button: FC<ButtonProps> = props => {
     ...restProps
   } = props
 
-  const classes = classNames('spirit-button', `is-${btnType}`)
+  const buttonEl = useRef<HTMLButtonElement>(null);
+  useWave(buttonEl)
+
+  const classes = classNames('spirit-button', `is-${btnType}`,
+    {
+      'is-large': size === 'large',
+      'is-normal': size === 'normal',
+      'is-small': size === 'small',
+      'is-mini': size === 'mini'
+    }
+  )
 
   if (btnType === 'link' && href) {
     return (
@@ -42,6 +54,7 @@ export const Button: FC<ButtonProps> = props => {
   }
   return (
     <button
+      ref={buttonEl}
       className={classes}
       disabled={disabled}
       {...restProps}

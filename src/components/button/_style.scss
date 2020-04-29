@@ -1,7 +1,16 @@
 %btn {
-  padding: 4px 15px;
+  position: relative;
+  white-space: nowrap;
+  background-image: none;
+  padding: 0 15px;
   border: 1px solid transparent;
   border-radius: 2px;
+  font-size: $btn-font-size-normal;
+  height: $btn-size-normal;
+  box-shadow: 0 2px 0 rgba(0,0,0,.015);
+  user-select: none;
+  touch-action: manipulation;
+  transition: all .3s $ease-in-out;
   cursor: pointer;
   &:focus {
     outline: none;
@@ -9,6 +18,11 @@
   &+.spirit-button {
     margin-left: $margin-md;
   }
+}
+
+%btn-shadow {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 0 rgba(0,0,0,.045);
 }
 
 %default {
@@ -32,6 +46,7 @@
 %primary {
   color: $btn-text;
   background-color: $btn-primary-bg-color;
+  @extend %btn-shadow;
   &:hover {
     background-color: $btn-primary-hover-bg;
   }
@@ -46,6 +61,7 @@
 %success {
   color: $btn-text;
   background-color: $btn-success-bg-color;
+  @extend %btn-shadow;
   &:hover {
     background-color: $btn-success-hover-bg;
   }
@@ -60,6 +76,7 @@
 %warning {
   color: $btn-text;
   background-color: $btn-warning-bg-color;
+  @extend %btn-shadow;
   &:hover {
     background-color: $btn-warning-hover-bg;
   }
@@ -74,6 +91,7 @@
 %danger {
   color: $btn-text;
   background-color: $btn-danger-bg-color;
+  @extend %btn-shadow;
   &:hover {
     background-color: $btn-danger-hover-bg;
   }
@@ -85,8 +103,30 @@
   }
 }
 
-@include b(button) {
-  @extend %btn;
+@mixin btn-size () {
+  @include when(large) {
+    height: $btn-size-large;
+    line-height: $btn-size-large - 2;
+    font-size: $btn-font-size-large;
+  }
+  @include when(normal) {
+    height: $btn-size-normal;
+    line-height: $btn-size-normal - 2;
+    font-size: $btn-font-size-normal;
+  }
+  @include when(small) {
+    height: $btn-size-small;
+    line-height: $btn-size-small - 2;
+    font-size: $btn-font-size-normal;
+  }
+  @include when(mini) {
+    height: $btn-size-mini;
+    line-height: $btn-size-mini - 2;
+    font-size: $btn-font-size-mini;
+  }
+}
+
+@mixin btn-type {
   @include when(default) {
     @extend %default;
   }
@@ -102,4 +142,10 @@
   @include when(danger) {
     @extend %danger;
   }
+}
+
+@include b(button) {
+  @extend %btn;
+  @include btn-size();
+  @include btn-type();
 }
