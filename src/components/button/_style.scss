@@ -45,6 +45,7 @@
 
 %primary {
   color: $btn-text;
+  border-color: $btn-primary-bg-color;
   background-color: $btn-primary-bg-color;
   @extend %btn-shadow;
   &:hover {
@@ -60,6 +61,7 @@
 
 %success {
   color: $btn-text;
+  border-color: $btn-success-bg-color;
   background-color: $btn-success-bg-color;
   @extend %btn-shadow;
   &:hover {
@@ -75,6 +77,7 @@
 
 %warning {
   color: $btn-text;
+  border-color: $btn-warning-bg-color;
   background-color: $btn-warning-bg-color;
   @extend %btn-shadow;
   &:hover {
@@ -90,6 +93,7 @@
 
 %danger {
   color: $btn-text;
+  border-color: $btn-danger-bg-color;
   background-color: $btn-danger-bg-color;
   @extend %btn-shadow;
   &:hover {
