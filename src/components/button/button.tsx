@@ -44,7 +44,8 @@ export const Button: FC<ButtonProps> = props => {
       'is-normal': size === 'normal',
       'is-small': size === 'small',
       'is-mini': size === 'mini'
-    }
+    },
+    className
   )
 
   if (btnType === 'link' && href) {

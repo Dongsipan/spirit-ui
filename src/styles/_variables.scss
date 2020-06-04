@@ -162,6 +162,8 @@ $btn-default-active-bg: map-get($color-primary-map, dark-1);
 $btn-default-active-bc: map-get($color-primary-map, dark-2);
 
 $btn-text: $color-white;
+$btn-link-text: $color-primary;
+$btn-link-hover-text: map-get($color-primary-map, light-1);
 $btn-primary-bg-color: $color-primary;
 $btn-primary-hover-bg: map-get($color-primary-map, light-1);
 $btn-primary-active-bg: map-get($color-primary-map, dark-2);
