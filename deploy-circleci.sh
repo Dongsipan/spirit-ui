@@ -1,4 +1,4 @@
 git pull
 yarn build-storybook
-git checkout gh-pages
-git push
+git checkout docs
+git push origin docs
