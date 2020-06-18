@@ -1,29 +1,40 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes, useRef } from 'react';
-import classNames from 'classnames';
-import useWave from '../../hooks/useWave';
+import React, {
+  FC,
+  ButtonHTMLAttributes,
+  AnchorHTMLAttributes,
+  useRef,
+} from "react";
+import classNames from "classnames";
+import useWave from "../../hooks/useWave";
 
-export type ButtonSize = 'large' | 'normal' | 'small' | 'mini'
-export type ButtonType = 'primary' | 'default' | 'success' | 'warning' | 'danger' | 'link'
+export type ButtonSize = "large" | "normal" | "small" | "mini";
+export type ButtonType =
+  | "primary"
+  | "default"
+  | "success"
+  | "warning"
+  | "danger"
+  | "link";
 
 interface BaseButtonProps {
   className?: string;
   /** 设置 Button 状态 */
   loading?: boolean;
-  /**设置 Button 的禁用 */
+  /** 设置 Button 的禁用 */
   disabled?: boolean;
-  /**设置 Button 的尺寸 */
+  /** 设置 Button 的尺寸 */
   size?: ButtonSize;
-  /**设置 Button 的类型 */
+  /** 设置 Button 的类型 */
   btnType?: ButtonType;
   children: React.ReactNode;
-  /**设置 Button 的 href */
+  /** 设置 Button 的 href */
   href?: string;
 }
-type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
-type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
-export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
+type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
+type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
-export const Button: FC<ButtonProps> = props => {
+export const Button: FC<ButtonProps> = (props) => {
   const {
     className,
     loading,
@@ -33,24 +44,28 @@ export const Button: FC<ButtonProps> = props => {
     children,
     href,
     ...restProps
-  } = props
+  } = props;
 
   const buttonEl = useRef<HTMLButtonElement>(null);
-  useWave(buttonEl)
+  useWave(buttonEl);
 
-  const classes = classNames('spirit-button', `is-${btnType}`,
+  const classes = classNames(
+    "spirit-button",
+    `is-${btnType}`,
     {
-      'is-large': size === 'large',
-      'is-normal': size === 'normal',
-      'is-small': size === 'small',
-      'is-mini': size === 'mini'
+      "is-large": size === "large",
+      "is-normal": size === "normal",
+      "is-small": size === "small",
+      "is-mini": size === "mini",
     },
     className
-  )
+  );
 
-  if (btnType === 'link' && href) {
+  if (btnType === "link" && href) {
     return (
-      <a className={classes} href={href} {...restProps}>{children}</a>
+      <a className={classes} href={href} {...restProps}>
+        {children}
+      </a>
     );
   }
   return (
@@ -63,12 +78,12 @@ export const Button: FC<ButtonProps> = props => {
       {children}
     </button>
   );
-}
+};
 
 Button.defaultProps = {
   loading: false,
   disabled: false,
-  btnType: 'default'
-}
+  btnType: "default",
+};
 
 export default Button;
