@@ -20,14 +20,10 @@ git add -A
 
 # 把修改的文件提交
 echo "执行命令：commit -m 'deploy'"
-git commit -m 'deploy'
+git commit -m 'deploy: build docs[ci skip]'
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f https://github.com/Dongsipan/spirit-ui.git master:gh-pages
-
-# 返回到上一次的工作目录
-echo "回到刚才工作目录"
-cd -
