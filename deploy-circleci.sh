@@ -6,6 +6,10 @@ npm run build-storybook
 echo "执行命令：cd ./storybook-static\n"
 cd ./storybook-static
 
+git config --global user.email "dongsipan@126.com"
+ 
+git config --global user.name "Dongsipan"
+
 # 初始化一个仓库，仅仅是做了一个初始化的操作，项目里的文件还没有被跟踪
 echo "执行命令：git init\n"
 git init
