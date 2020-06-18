@@ -18,7 +18,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "precommit": "pretty-quick --staged",
+    "precommit": "lint-staged",
     "lint-fix": "eslint --fix --ext .ts --ext .tsx src/",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -26,6 +26,18 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix --ext .ts",
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.tsx": [
+      "eslint --fix --ext .tsx",
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
