@@ -1,8 +1,8 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 
-storiesOf("Welcome page", module).add(
-  "welcome",
+storiesOf('Welcome page', module).add(
+  'welcome',
   () => {
     return (
       <>
@@ -11,7 +11,7 @@ storiesOf("Welcome page", module).add(
         <h3>安装试试</h3>
         <code>npm install spirit --save</code>
       </>
-    );
+    )
   },
   { info: { disable: true } }
-);
+)
