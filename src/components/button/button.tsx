@@ -14,7 +14,7 @@ export type ButtonType =
   | 'success'
   | 'warning'
   | 'danger'
-  | 'link'
+  | 'linka'
 
 interface BaseButtonProps {
   className?: string
