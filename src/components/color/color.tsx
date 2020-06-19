@@ -2,13 +2,13 @@ import React from 'react'
 function Color() {
   return (
     <>
-      <div className="color-panel">
+      <div className="color-panel" data-testid="color">
         <div className="color-primary">primary</div>
         <div className="color-success">success</div>
         <div className="color-warning">warning</div>
         <div className="color-danger">error</div>
       </div>
-      <div className="color-panel">
+      <div className="color-panel" data-testid="color">
         {[5, 4, 3, 2, 1].map(i => (
           <div
             className={`color-primary-light-${i}`}
@@ -24,7 +24,7 @@ function Color() {
           </div>
         ))}
       </div>
-      <div className="color-panel">
+      <div className="color-panel" data-testid="color">
         {[5, 4, 3, 2, 1].map(i => (
           <div
             className={`color-success-light-${i}`}
@@ -40,7 +40,7 @@ function Color() {
           </div>
         ))}
       </div>
-      <div className="color-panel">
+      <div className="color-panel" data-testid="color">
         {[5, 4, 3, 2, 1].map(i => (
           <div
             className={`color-warning-light-${i}`}
@@ -56,7 +56,7 @@ function Color() {
           </div>
         ))}
       </div>
-      <div className="color-panel">
+      <div className="color-panel" data-testid="color">
         {[5, 4, 3, 2, 1].map(i => (
           <div className={`color-danger-light-${i}`} key={`danger-light-${i}`}>
             light-{i}
@@ -69,7 +69,7 @@ function Color() {
           </div>
         ))}
       </div>
-      <div className="color-panel">
+      <div className="color-panel" data-testid="color">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map(i => (
           <div className={`color-neutral-${i}`} key={`neutral-${i}`}>
             neutral-{i}
