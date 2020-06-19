@@ -32,7 +32,7 @@ describe('测试Button组件', () => {
     const wrapper = render(<Button {...testProps}>Nice</Button>)
     const element = wrapper.getByText('Nice')
     expect(element).toBeInTheDocument()
-    expect(element).toHaveClass('spirit-button is-primary is-large test1')
+    expect(element).toHaveClass('spirit-button is-primary is-large test')
   })
 
   it('当btnType等于link 并且有href属性 应该正确渲染link button', () => {
