@@ -1,3 +1,6 @@
+echo "执行命令：npm run test\n"
+npm run test -- --coverage
+
 # build
 echo "执行命令：npm run build-storybook\n"
 npm run build-storybook
