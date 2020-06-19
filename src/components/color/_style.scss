@@ -1,99 +1,104 @@
 .color-panel {
-  display: flex;
-  margin: 20px;
-  box-shadow: shadow(2, down);
-  div {
-    height: 50px;
-    width: 90px;
-    text-align: center;
-    line-height: 3;
-  }
+    display: flex;
+    margin: 20px;
+    box-shadow: shadow(2, down);
 
-  .color-primary {
-    background-color: $color-primary;
-  }
-
-  @for $i from 1 through 5 {
-    .color-primary-light-#{$i} {
-      background-color: mix($color-white, $color-primary, 16.8% * $i);
+    div {
+        width: 90px;
+        height: 50px;
+        line-height: 3;
+        text-align: center;
     }
-  }
 
-  @for $i from 1 through 5 {
-    .color-primary-dark-#{$i} {
-      background-color: mix($color-black, $color-primary, 16.8% * $i);
+    .color-primary {
+        background-color: $color-primary;
     }
-  }
 
-  @for $i from 1 through 5 {
-    .color-success-light-#{$i} {
-      background-color: mix($color-white, $color-success, 16.8% * $i);
+    @for $i from 1 through 5 {
+        .color-primary-light-#{$i} {
+            background-color: mix($color-white, $color-primary, 16.8% * $i);
+        }
     }
-  }
 
-  @for $i from 1 through 5 {
-    .color-success-dark-#{$i} {
-      background-color: mix($color-black, $color-success, 16.8% * $i);
+    @for $i from 1 through 5 {
+        .color-primary-dark-#{$i} {
+            background-color: mix($color-black, $color-primary, 16.8% * $i);
+        }
     }
-  }
 
-  @for $i from 1 through 5 {
-    .color-warning-light-#{$i} {
-      background-color: mix($color-white, $color-warning, 16.8% * $i);
+    @for $i from 1 through 5 {
+        .color-success-light-#{$i} {
+            background-color: mix($color-white, $color-success, 16.8% * $i);
+        }
     }
-  }
 
-  @for $i from 1 through 5 {
-    .color-warning-dark-#{$i} {
-      background-color: mix($color-black, $color-warning, 16.8% * $i);
+    @for $i from 1 through 5 {
+        .color-success-dark-#{$i} {
+            background-color: mix($color-black, $color-success, 16.8% * $i);
+        }
     }
-  }
 
-  @for $i from 1 through 5 {
-    .color-danger-light-#{$i} {
-      background-color: mix($color-white, $color-danger, 16.8% * $i);
+    @for $i from 1 through 5 {
+        .color-warning-light-#{$i} {
+            background-color: mix($color-white, $color-warning, 16.8% * $i);
+        }
     }
-  }
 
-  @for $i from 1 through 5 {
-    .color-danger-dark-#{$i} {
-      background-color: mix($color-black, $color-danger, 16.8% * $i);
+    @for $i from 1 through 5 {
+        .color-warning-dark-#{$i} {
+            background-color: mix($color-black, $color-warning, 16.8% * $i);
+        }
     }
-  }
 
-  @for $i from 1 through 13 {
-    .color-neutral-#{$i} {
-      background-color: mix($color-white, $color-black, 7.6% * (14-$i));
+    @for $i from 1 through 5 {
+        .color-danger-light-#{$i} {
+            background-color: mix($color-white, $color-danger, 16.8% * $i);
+        }
     }
-  }
 
-  div[class^="color-primary-dark-"] {
-    color: $color-white;
-  }
-  .color-neutral-8,
-  .color-neutral-9,
-  .color-neutral-10,
-  .color-neutral-11,
-  .color-neutral-12,
-  .color-neutral-13,
-  .color-primary,
-  .color-success,
-  .color-warning,
-  .color-danger {
-    color: $color-white;
-  }
-  .color-success {
-    background-color: $color-success;
-  }
-  .color-warning {
-    background-color: $color-warning;
-  }
-  .color-danger {
-    background-color: $color-danger;
-  }
-  // @each $key in map-keys($primary-map) {
-  //   .test-color-#{$key} {
-  //     background-color: map-get($primary-map, $key);
-  //   }
-  // }
+    @for $i from 1 through 5 {
+        .color-danger-dark-#{$i} {
+            background-color: mix($color-black, $color-danger, 16.8% * $i);
+        }
+    }
+
+    @for $i from 1 through 13 {
+        .color-neutral-#{$i} {
+            background-color: mix($color-white, $color-black, 7.6% * (14 - $i));
+        }
+    }
+
+    div[class^="color-primary-dark-"] {
+        color: $color-white;
+    }
+
+    .color-neutral-8,
+    .color-neutral-9,
+    .color-neutral-10,
+    .color-neutral-11,
+    .color-neutral-12,
+    .color-neutral-13,
+    .color-primary,
+    .color-success,
+    .color-warning,
+    .color-danger {
+        color: $color-white;
+    }
+
+    .color-success {
+        background-color: $color-success;
+    }
+
+    .color-warning {
+        background-color: $color-warning;
+    }
+
+    .color-danger {
+        background-color: $color-danger;
+    }
+    // @each $key in map-keys($primary-map) {
+    //   .test-color-#{$key} {
+    //     background-color: map-get($primary-map, $key);
+    //   }
+    // }
 }

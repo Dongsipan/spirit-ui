@@ -15,12 +15,11 @@ $color-warning: $color-chinese-yellow !default;
 $color-danger: $color-tart-orange !default;
 
 // 主题色
-$color-primary-map: getSeriesMap($color-primary);
-$color-success-map: getSeriesMap($color-success);
-$color-warning-map: getSeriesMap($color-warning);
-$color-danger-map: getSeriesMap($color-danger);
-$color-neutral-map: getNeutralMap();
-
+$color-primary-map: getseriesmap($color-primary);
+$color-success-map: getseriesmap($color-success);
+$color-warning-map: getseriesmap($color-warning);
+$color-danger-map: getseriesmap($color-danger);
+$color-neutral-map: getneutralmap();
 
 // 文字色
 $color-text-title: map-get($color-neutral-map, 12) !default;
@@ -28,17 +27,14 @@ $color-text-primary: map-get($color-neutral-map, 10) !default;
 $color-text-secondary: map-get($color-neutral-map, 8) !default;
 $color-text-disabled: map-get($color-neutral-map, 4) !default;
 
-
 // 背景色
 $body-background: $color-white;
 $component-background: $color-white;
-
 
 // body
 $body-bg: $color-white !default;
 $body-color: $color-text-primary !default;
 $body-text-align: null !default;
-
 
 // 边框
 $border-width: 1px !default;
@@ -50,12 +46,10 @@ $border-radius-sm: $border-radius-base !default;
 // 分割线
 $divider-color: map-get($color-neutral-map, 1) !default;
 
-
 // 字体
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
-
 
 // 字号
 $font-size-esm: 12px !default; // 辅助文字
@@ -65,7 +59,6 @@ $font-size-md: 16px !default; // 小标题
 $font-size-lg: 18px !default; // 标题
 $font-size-elg: 20px !default; // 主标题
 
-
 // 字重
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
@@ -73,7 +66,6 @@ $font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: bolder !default;
 $font-weight-base: $font-weight-normal !default;
-
 
 // 标题大小
 $h1-font-size: $font-size-base * 2.5 !default;
@@ -83,17 +75,14 @@ $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
-
 // 链接
 $link-color: $color-primary !default;
 $link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
-
 // 行高
 $line-height-base: 1.5715 !default;
-
 
 // 内边距
 $padding-lg: 24px !default; // containers
@@ -102,7 +91,6 @@ $padding-sm: 12px !default; // Form controls and items
 $padding-xs: 8px !default; // small items
 $padding-xss: 4px !default; // more small
 
-
 // 外边距
 $margin-lg: 24px !default; // containers
 $margin-md: 16px !default; // small containers and buttons
@@ -110,40 +98,36 @@ $margin-sm: 12px !default; // Form controls and items
 $margin-xs: 8px !default; // small items
 $margin-xss: 4px !default; // more small
 
-
 // height rules
 $height-base: 32px !default;
 $height-lg: 40px !default;
 $height-sm: 24px !default;
 
-
 // 阴影
-$shadow-color16: rgba(0, 0, 0, 0.16) !default;
-$shadow-color12: rgba(0, 0, 0, 0.12) !default;
-$shadow-color9: rgba(0, 0, 0, 0.09) !default;
-$shadow-color8: rgba(0, 0, 0, 0.08) !default;
-$shadow-color5: rgba(0, 0, 0, 0.05) !default;
-$shadow-color3: rgba(0, 0, 0, 0.03) !default;
-
+$shadow-color16: rgba(0, 0, 0, .16) !default;
+$shadow-color12: rgba(0, 0, 0, .12) !default;
+$shadow-color9: rgba(0, 0, 0, .09) !default;
+$shadow-color8: rgba(0, 0, 0, .08) !default;
+$shadow-color5: rgba(0, 0, 0, .05) !default;
+$shadow-color3: rgba(0, 0, 0, .03) !default;
 
 // 动画
-$ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1) !default;
-$ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7) !default;
-$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
-$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
-$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
-$ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46) !default;
-$ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6) !default;
-$ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46) !default;
-$ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1) !default;
-$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34) !default;
-$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86) !default;
-$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
-$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
-$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+$ease-base-out: cubic-bezier(.7, .3, .1, 1) !default;
+$ease-base-in: cubic-bezier(.9, 0, .3, .7) !default;
+$ease-out: cubic-bezier(.215, .61, .355, 1) !default;
+$ease-in: cubic-bezier(.55, .055, .675, .19) !default;
+$ease-in-out: cubic-bezier(.645, .045, .355, 1) !default;
+$ease-out-back: cubic-bezier(.12, .4, .29, 1.46) !default;
+$ease-in-back: cubic-bezier(.71, -.46, .88, .6) !default;
+$ease-in-out-back: cubic-bezier(.71, -.46, .29, 1.46) !default;
+$ease-out-circ: cubic-bezier(.08, .82, .17, 1) !default;
+$ease-in-circ: cubic-bezier(.6, .04, .98, .34) !default;
+$ease-in-out-circ: cubic-bezier(.78, .14, .15, .86) !default;
+$ease-out-quint: cubic-bezier(.23, 1, .32, 1) !default;
+$ease-in-quint: cubic-bezier(.755, .05, .855, .06) !default;
+$ease-in-out-quint: cubic-bezier(.86, 0, .07, 1) !default;
 
 $wave-animation-width: 6px;
-
 
 // button 组件
 $btn-size-large: 40px !default;

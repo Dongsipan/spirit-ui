@@ -1,12 +1,13 @@
 @mixin clearfix {
-  @at-root {
-    &::before,
-    &::after {
-      display: table;
-      content: "";
+    @at-root {
+        &::before,
+        &::after {
+            display: table;
+            content: "";
+        }
+
+        &::after {
+            clear: both;
+        }
     }
-    &::after {
-      clear: both;
-    }
-  }
 }

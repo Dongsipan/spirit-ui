@@ -19,6 +19,7 @@
   },
   "scripts": {
     "lint-fix": "eslint --fix --ext .ts --ext .tsx src/",
+    "lint-css": "stylelint **/*.scss --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +37,10 @@
     "src/**/*.{ts,tsx}": [
       "eslint --fix --ext .ts --ext .tsx",
       "prettier --write"
+    ],
+    "*.{scss,css}": [
+      "stylelint **/*.scss --fix",
+      "git add"
     ]
   },
   "eslintConfig": {
@@ -79,6 +84,10 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
-    "react-docgen-typescript-loader": "^3.7.2"
+    "react-docgen-typescript-loader": "^3.7.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0"
   }
 }

@@ -1,76 +1,83 @@
-$shadow-1-up: 0px -1px 2px -2px $shadow-color16, 0px -3px 6px 0px $shadow-color12, 0px -5px 12px 4px $shadow-color9 !default;
-$shadow-1-down: 0px 1px 2px -2px $shadow-color16, 0px 3px 6px 0px $shadow-color12, 0px 5px 12px 4px $shadow-color9 !default;
-$shadow-1-left: -1px 0px 2px -2px $shadow-color16, -3px 0px 6px 0px $shadow-color12, -5px 0px 12px 4px $shadow-color9 !default;
-$shadow-1-right: 1px 0px 2px -2px $shadow-color16, 3px 0px 6px 0px $shadow-color12, 5px 0px 12px 4px $shadow-color9 !default;
+$shadow-1-up: 0 -1px 2px -2px $shadow-color16, 0 -3px 6px 0 $shadow-color12, 0 -5px 12px 4px $shadow-color9 !default;
+$shadow-1-down: 0 1px 2px -2px $shadow-color16, 0 3px 6px 0 $shadow-color12, 0 5px 12px 4px $shadow-color9 !default;
+$shadow-1-left: -1px 0 2px -2px $shadow-color16, -3px 0 6px 0 $shadow-color12, -5px 0 12px 4px $shadow-color9 !default;
+$shadow-1-right: 1px 0 2px -2px $shadow-color16, 3px 0 6px 0 $shadow-color12, 5px 0 12px 4px $shadow-color9 !default;
 
-$shadow-2-up: 0px 3px 6px -4px $shadow-color12, 0px -6px 16px 0px $shadow-color8, 0px -9px 28px 8px $shadow-color5 !default;
-$shadow-2-down: 0px 3px 6px -4px $shadow-color12, 0px 6px 16px 0px $shadow-color8, 0px 9px 28px 8px $shadow-color5 !default;
-$shadow-2-left: -3px 0px 6px -4px $shadow-color12, 6px 0px 16px 0px $shadow-color8, -9px 0px 6px -4px $shadow-color5 !default;
-$shadow-2-right: 3px 0px 6px -4px $shadow-color12, 6px 0px 16px 0px $shadow-color8, 9px 0px 28px 8px $shadow-color5 !default;
+$shadow-2-up: 0 3px 6px -4px $shadow-color12, 0 -6px 16px 0 $shadow-color8, 0 -9px 28px 8px $shadow-color5 !default;
+$shadow-2-down: 0 3px 6px -4px $shadow-color12, 0 6px 16px 0 $shadow-color8, 0 9px 28px 8px $shadow-color5 !default;
+$shadow-2-left: -3px 0 6px -4px $shadow-color12, 6px 0 16px 0 $shadow-color8, -9px 0 6px -4px $shadow-color5 !default;
+$shadow-2-right: 3px 0 6px -4px $shadow-color12, 6px 0 16px 0 $shadow-color8, 9px 0 28px 8px $shadow-color5 !default;
 
-$shadow-3-up: 0px -6px 16px -8px $shadow-color8, 0px -9px 28px 0px $shadow-color5, 0px -12px 48px 16px $shadow-color3 !default;
-$shadow-3-down: 0px 6px 16px -8px $shadow-color8, 0px 9px 28px 0px $shadow-color5, 0px 12px 48px 16px $shadow-color3 !default;
-$shadow-3-left: -6px 0px 16px -8px $shadow-color8, -9px 0px 28px 0px $shadow-color5, -12px 0px 48px 16px $shadow-color3 !default;
-$shadow-3-right: 6px 0px 16px -8px $shadow-color8, 9px 0px 28px 0px $shadow-color5, 12px 0px 48px 16px $shadow-color3 !default;
+$shadow-3-up: 0 -6px 16px -8px $shadow-color8, 0 -9px 28px 0 $shadow-color5, 0 -12px 48px 16px $shadow-color3 !default;
+$shadow-3-down: 0 6px 16px -8px $shadow-color8, 0 9px 28px 0 $shadow-color5, 0 12px 48px 16px $shadow-color3 !default;
+$shadow-3-left: -6px 0 16px -8px $shadow-color8, -9px 0 28px 0 $shadow-color5, -12px 0 48px 16px $shadow-color3 !default;
+$shadow-3-right: 6px 0 16px -8px $shadow-color8, 9px 0 28px 0 $shadow-color5, 12px 0 48px 16px $shadow-color3 !default;
 
 $shadow-level-1: (
-  up: $shadow-1-up,
-  down: $shadow-1-down,
-  left: $shadow-1-left,
-  right: $shadow-1-right
+    up: $shadow-1-up,
+    down: $shadow-1-down,
+    left: $shadow-1-left,
+    right: $shadow-1-right
 );
 
 $shadow-level-2: (
-  up: $shadow-2-up,
-  down: $shadow-2-down,
-  left: $shadow-2-left,
-  right: $shadow-2-right
+    up: $shadow-2-up,
+    down: $shadow-2-down,
+    left: $shadow-2-left,
+    right: $shadow-2-right
 );
 
 $shadow-level-3: (
-  up: $shadow-3-up,
-  down: $shadow-3-down,
-  left: $shadow-3-left,
-  right: $shadow-3-right
+    up: $shadow-3-up,
+    down: $shadow-3-down,
+    left: $shadow-3-left,
+    right: $shadow-3-right
 );
 
 @function shadow-1($name) {
-  @if map-has-key($shadow-level-1, $name) {
-    @return map-get($shadow-level-1, $name);
-  }
+    @if map-has-key($shadow-level-1, $name) {
+        @return map-get($shadow-level-1, $name);
+    }
 
-  @warn "The key of '#{$name}' is not in the map '$shadow-level-1'";
-  @return null;
+    @warn "The key of '#{$name}' is not in the map '$shadow-level-1'";
+
+    @return null;
 }
 
 @function shadow-2($name) {
-  @if map-has-key($shadow-level-2, $name) {
-    @return map-get($shadow-level-2, $name);
-  }
+    @if map-has-key($shadow-level-2, $name) {
+        @return map-get($shadow-level-2, $name);
+    }
 
-  @warn "The key of '#{$name}' is not in the map '$shadow-level-2'";
-  @return null;
+    @warn "The key of '#{$name}' is not in the map '$shadow-level-2'";
+
+    @return null;
 }
 
 @function shadow-3($name) {
-  @if map-has-key($shadow-level-3, $name) {
-    @return map-get($shadow-level-3, $name);
-  }
+    @if map-has-key($shadow-level-3, $name) {
+        @return map-get($shadow-level-3, $name);
+    }
 
-  @warn "The key of '#{$name}' is not in the map '$shadow-level-3'";
-  @return null;
+    @warn "The key of '#{$name}' is not in the map '$shadow-level-3'";
+
+    @return null;
 }
 
 @function shadow($level, $name) {
-  @if $level == 1 {
-    @return shadow-1($name);
-  }
-  @if $level == 2 {
-    @return shadow-2($name);
-  }
-  @if $level == 3 {
-    @return shadow-3($name);
-  }
-  @warn "'$shadow-level-#{$level}' is not in the map ";
-  @return null;
+    @if $level == 1 {
+        @return shadow-1($name);
+    }
+
+    @if $level == 2 {
+        @return shadow-2($name);
+    }
+
+    @if $level == 3 {
+        @return shadow-3($name);
+    }
+
+    @warn "'$shadow-level-#{$level}' is not in the map ";
+
+    @return null;
 }
