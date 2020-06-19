@@ -39,8 +39,7 @@
       "prettier --write"
     ],
     "*.{scss,css}": [
-      "stylelint **/*.scss --fix",
-      "git add"
+      "stylelint **/*.scss --fix"
     ]
   },
   "eslintConfig": {
