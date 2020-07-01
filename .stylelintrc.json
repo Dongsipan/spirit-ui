@@ -12,9 +12,10 @@
     "string-quotes": "double",
     "selector-list-comma-newline-before": "never-multi-line",
     "media-query-list-comma-newline-before": "never-multi-line",
-    "indentation": 4,
+    "indentation": 2,
     "no-descending-specificity": null,
     "no-empty-source": null,
-    "no-missing-end-of-source-newline": null
+    "no-missing-end-of-source-newline": null,
+    "declaration-block-trailing-semicolon": null
   }
 }

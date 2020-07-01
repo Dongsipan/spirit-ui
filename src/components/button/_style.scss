@@ -1,200 +1,200 @@
 %btn {
-    position: relative;
-    height: $btn-size-normal;
-    padding: 0 15px;
-    font-size: $btn-font-size-normal;
-    white-space: nowrap;
-    touch-action: manipulation;
-    cursor: pointer;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, .015);
-    transition: all .3s $ease-in-out;
+  position: relative;
+  height: $btn-size-normal;
+  padding: 0 15px;
+  font-size: $btn-font-size-normal;
+  white-space: nowrap;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .015);
+  transition: all .3s $ease-in-out;
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 
-    & + .spirit-button {
-        margin-left: $margin-md;
-    }
+  & + .spirit-button {
+    margin-left: $margin-md;
+  }
 }
 
 %btn-shadow {
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, .12);
-    box-shadow: 0 2px 0 rgba(0, 0, 0, .045);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .045);
 }
 
 %default {
-    color: $btn-default-text;
-    background-color: $btn-default-bg-color;
-    border-color: $border-color;
+  color: $btn-default-text;
+  background-color: $btn-default-bg-color;
+  border-color: $border-color;
 
-    &:hover {
-        color: $btn-default-hover-bg;
-        border-color: $btn-default-hover-bg;
-    }
+  &:hover {
+    color: $btn-default-hover-bg;
+    border-color: $btn-default-hover-bg;
+  }
 
-    &:focus {
-        color: $btn-default-hover-bg;
-        border-color: $btn-default-hover-bg;
-    }
+  &:focus {
+    color: $btn-default-hover-bg;
+    border-color: $btn-default-hover-bg;
+  }
 
-    &:active {
-        color: $btn-default-active-bg;
-        border-color: $btn-default-active-bc;
-    }
+  &:active {
+    color: $btn-default-active-bg;
+    border-color: $btn-default-active-bc;
+  }
 }
 
 %primary {
-    color: $btn-text;
+  color: $btn-text;
+  background-color: $btn-primary-bg-color;
+  border-color: $btn-primary-bg-color;
+
+  @extend %btn-shadow;
+
+  &:hover {
+    background-color: $btn-primary-hover-bg;
+  }
+
+  &:focus {
     background-color: $btn-primary-bg-color;
-    border-color: $btn-primary-bg-color;
+  }
 
-    @extend %btn-shadow;
-
-    &:hover {
-        background-color: $btn-primary-hover-bg;
-    }
-
-    &:focus {
-        background-color: $btn-primary-bg-color;
-    }
-
-    &:active {
-        background-color: $btn-primary-active-bg;
-    }
+  &:active {
+    background-color: $btn-primary-active-bg;
+  }
 }
 
 %success {
-    color: $btn-text;
+  color: $btn-text;
+  background-color: $btn-success-bg-color;
+  border-color: $btn-success-bg-color;
+
+  @extend %btn-shadow;
+
+  &:hover {
+    background-color: $btn-success-hover-bg;
+  }
+
+  &:focus {
     background-color: $btn-success-bg-color;
-    border-color: $btn-success-bg-color;
+  }
 
-    @extend %btn-shadow;
-
-    &:hover {
-        background-color: $btn-success-hover-bg;
-    }
-
-    &:focus {
-        background-color: $btn-success-bg-color;
-    }
-
-    &:active {
-        background-color: $btn-success-active-bg;
-    }
+  &:active {
+    background-color: $btn-success-active-bg;
+  }
 }
 
 %warning {
-    color: $btn-text;
+  color: $btn-text;
+  background-color: $btn-warning-bg-color;
+  border-color: $btn-warning-bg-color;
+
+  @extend %btn-shadow;
+
+  &:hover {
+    background-color: $btn-warning-hover-bg;
+  }
+
+  &:focus {
     background-color: $btn-warning-bg-color;
-    border-color: $btn-warning-bg-color;
+  }
 
-    @extend %btn-shadow;
-
-    &:hover {
-        background-color: $btn-warning-hover-bg;
-    }
-
-    &:focus {
-        background-color: $btn-warning-bg-color;
-    }
-
-    &:active {
-        background-color: $btn-warning-active-bg;
-    }
+  &:active {
+    background-color: $btn-warning-active-bg;
+  }
 }
 
 %danger {
-    color: $btn-text;
+  color: $btn-text;
+  background-color: $btn-danger-bg-color;
+  border-color: $btn-danger-bg-color;
+
+  @extend %btn-shadow;
+
+  &:hover {
+    background-color: $btn-danger-hover-bg;
+  }
+
+  &:focus {
     background-color: $btn-danger-bg-color;
-    border-color: $btn-danger-bg-color;
+  }
 
-    @extend %btn-shadow;
-
-    &:hover {
-        background-color: $btn-danger-hover-bg;
-    }
-
-    &:focus {
-        background-color: $btn-danger-bg-color;
-    }
-
-    &:active {
-        background-color: $btn-danger-active-bg;
-    }
+  &:active {
+    background-color: $btn-danger-active-bg;
+  }
 }
 
 %link {
-    color: $btn-link-text;
-    background: 0 0;
-    border-color: transparent;
-    box-shadow: none;
-    text-decoration-line: none;
+  color: $btn-link-text;
+  background: 0 0;
+  border-color: transparent;
+  box-shadow: none;
+  text-decoration-line: none;
 
-    &:hover {
-        color: $btn-link-hover-text;
-    }
+  &:hover {
+    color: $btn-link-hover-text;
+  }
 }
 
-@mixin btn-size () {
-    @include when(large) {
-        height: $btn-size-large;
-        font-size: $btn-font-size-large;
-        line-height: $btn-size-large - 2;
-    }
+@mixin btn-size() {
+  @include when(large) {
+    height: $btn-size-large;
+    font-size: $btn-font-size-large;
+    line-height: $btn-size-large - 2;
+  }
 
-    @include when(normal) {
-        height: $btn-size-normal;
-        font-size: $btn-font-size-normal;
-        line-height: $btn-size-normal - 2;
-    }
+  @include when(normal) {
+    height: $btn-size-normal;
+    font-size: $btn-font-size-normal;
+    line-height: $btn-size-normal - 2;
+  }
 
-    @include when(small) {
-        height: $btn-size-small;
-        font-size: $btn-font-size-normal;
-        line-height: $btn-size-small - 2;
-    }
+  @include when(small) {
+    height: $btn-size-small;
+    font-size: $btn-font-size-normal;
+    line-height: $btn-size-small - 2;
+  }
 
-    @include when(mini) {
-        height: $btn-size-mini;
-        font-size: $btn-font-size-mini;
-        line-height: $btn-size-mini - 2;
-    }
+  @include when(mini) {
+    height: $btn-size-mini;
+    font-size: $btn-font-size-mini;
+    line-height: $btn-size-mini - 2;
+  }
 }
 
 @mixin btn-type {
-    @include when(default) {
-        @extend %default;
-    }
+  @include when(default) {
+    @extend %default;
+  }
 
-    @include when(primary) {
-        @extend %primary;
-    }
+  @include when(primary) {
+    @extend %primary;
+  }
 
-    @include when(success) {
-        @extend %success;
-    }
+  @include when(success) {
+    @extend %success;
+  }
 
-    @include when(warning) {
-        @extend %warning;
-    }
+  @include when(warning) {
+    @extend %warning;
+  }
 
-    @include when(danger) {
-        @extend %danger;
-    }
+  @include when(danger) {
+    @extend %danger;
+  }
 
-    @include when(link) {
-        @extend %link;
-    }
+  @include when(link) {
+    @extend %link;
+  }
 }
 
 @include b(button) {
-    @extend %btn;
+  @extend %btn;
 
-    @include btn-size();
-    @include btn-type();
+  @include btn-size();
+  @include btn-type();
 }

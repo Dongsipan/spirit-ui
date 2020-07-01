@@ -1,39 +1,39 @@
 html {
-    --spirit-wave-shadow-color: $color-primary;
+  --spirit-wave-shadow-color: $color-primary;
 }
 
 [spirit-click-animating="true"],
 [spirit-click-animating-without-extra-node="true"] {
-    position: relative;
+  position: relative;
 }
 
 [spirit-click-animating-without-extra-node="true"]::after,
 .spirit-click-animating-node {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    pointer-events: none;
-    content: "";
-    border-radius: inherit;
-    box-shadow: 0 0 0 0 $color-primary;
-    box-shadow: 0 0 0 0 var(--spirit-wave-shadow-color);
-    opacity: .2;
-    animation: fadeEffect 2s $ease-out-circ, waveEffect .4s $ease-out-circ;
-    animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  pointer-events: none;
+  content: "";
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 $color-primary;
+  box-shadow: 0 0 0 0 var(--spirit-wave-shadow-color);
+  opacity: .2;
+  animation: fadeEffect 2s $ease-out-circ, waveEffect .4s $ease-out-circ;
+  animation-fill-mode: forwards;
 }
 
 @keyframes waveEffect {
-    100% {
-        box-shadow: 0 0 0 $color-primary;
-        box-shadow: 0 0 0 $wave-animation-width var(--spirit-wave-shadow-color);
-    }
+  100% {
+    box-shadow: 0 0 0 $color-primary;
+    box-shadow: 0 0 0 $wave-animation-width var(--spirit-wave-shadow-color);
+  }
 }
 
 @keyframes fadeEffect {
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }

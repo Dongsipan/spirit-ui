@@ -1,67 +1,67 @@
 @mixin b($block) {
-    $B: $namespace+"-"+$block !global;
+  $B: $namespace+"-"+$block !global;
 
-    .#{$B} {
-        @content;
-    }
+  .#{$B} {
+    @content;
+  }
 }
 
 @mixin e($element) {
-    $E: $element !global;
-    $selector: &;
-    $currentSelector: "";
+  $E: $element !global;
+  $selector: &;
+  $currentSelector: "";
 
-    @each $unit in $element {
-        $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
-    }
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+  }
 
-    @if hitAllSpecialNestRule($selector) {
-        @at-root {
-            #{$selector} {
-                #{$currentSelector} {
-                    @content;
-                }
-            }
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
         }
+      }
     }
+  }
 
-    @else {
-        @at-root {
-            #{$currentSelector} {
-                @content;
-            }
-        }
+  @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
     }
+  }
 }
 
 @mixin m($modifier) {
-    $selector: &;
-    $currentSelector: "";
+  $selector: &;
+  $currentSelector: "";
 
-    @each $unit in $modifier {
-        $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
-    }
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+  }
 
-    @at-root {
-        #{$currentSelector} {
-            @content;
-        }
+  @at-root {
+    #{$currentSelector} {
+      @content;
     }
+  }
 }
 
 @mixin meb($modifier: false, $element: $E, $block: $B) {
-    $selector: &;
-    $modifierCombo: "";
+  $selector: &;
+  $modifierCombo: "";
 
-    @if $modifier {
-        $modifierCombo: $modifier-separator + $modifier;
-    }
+  @if $modifier {
+    $modifierCombo: $modifier-separator + $modifier;
+  }
 
-    @at-root {
-        #{$selector} {
-            .#{$block+$element-separator+$element+$modifierCombo} {
-                @content;
-            }
-        }
+  @at-root {
+    #{$selector} {
+      .#{$block+$element-separator+$element+$modifierCombo} {
+        @content;
+      }
     }
+  }
 }

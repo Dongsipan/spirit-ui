@@ -2,53 +2,53 @@ $mix-percent: 16.8%;
 $mix-neutral-percent: 7.6%;
 
 @function generate($color, $mode, $level) {
-    @if $mode=="light" {
-        @return mix($color-white, $color, $mix-percent * $level);
-    }
+  @if $mode=="light" {
+    @return mix($color-white, $color, $mix-percent * $level);
+  }
 
-    @if $mode=="dark" {
-        @return mix($color-black, $color, $mix-percent * $level);
-    }
+  @if $mode=="dark" {
+    @return mix($color-black, $color, $mix-percent * $level);
+  }
 
-    @warn "The key of $mode should be 'light' or 'dark'";
+  @warn "The key of $mode should be 'light' or 'dark'";
 
-    @return null;
+  @return null;
 }
 
 @function generate-neutral($level) {
-    @return mix($color-black, $color-white, $mix-neutral-percent * $level);
+  @return mix($color-black, $color-white, $mix-neutral-percent * $level);
 }
 
 @function get-series-map($color) {
-    $color: (light-1: generate($color, light, 1),
-    light-2: generate($color, light, 2),
-    light-3: generate($color, light, 3),
-    light-4: generate($color, light, 4),
-    light-5: generate($color, light, 5),
-    dark-1: generate($color, dark, 1),
-    dark-2: generate($color, dark, 2),
-    dark-3: generate($color, dark, 3),
-    dark-4: generate($color, dark, 4),
-    dark-5: generate($color, dark, 5),
+  $color: (light-1: generate($color, light, 1),
+  light-2: generate($color, light, 2),
+  light-3: generate($color, light, 3),
+  light-4: generate($color, light, 4),
+  light-5: generate($color, light, 5),
+  dark-1: generate($color, dark, 1),
+  dark-2: generate($color, dark, 2),
+  dark-3: generate($color, dark, 3),
+  dark-4: generate($color, dark, 4),
+  dark-5: generate($color, dark, 5),
 );
 
-    @return $color;
+  @return $color;
 }
 
 @function get-neutral-map() {
-    $neutral-map: (1: generate-neutral(1),
-    2: generate-neutral(2),
-    3: generate-neutral(3),
-    4: generate-neutral(4),
-    5: generate-neutral(5),
-    6: generate-neutral(6),
-    7: generate-neutral(7),
-    8: generate-neutral(8),
-    9: generate-neutral(9),
-    10: generate-neutral(10),
-    11: generate-neutral(11),
-    12: generate-neutral(12),
-    13: generate-neutral(13));
+  $neutral-map: (1: generate-neutral(1),
+  2: generate-neutral(2),
+  3: generate-neutral(3),
+  4: generate-neutral(4),
+  5: generate-neutral(5),
+  6: generate-neutral(6),
+  7: generate-neutral(7),
+  8: generate-neutral(8),
+  9: generate-neutral(9),
+  10: generate-neutral(10),
+  11: generate-neutral(11),
+  12: generate-neutral(12),
+  13: generate-neutral(13));
 
-    @return $neutral-map;
+  @return $neutral-map;
 }
