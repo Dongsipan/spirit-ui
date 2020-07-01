@@ -15,11 +15,11 @@ $color-warning: $color-chinese-yellow !default;
 $color-danger: $color-tart-orange !default;
 
 // 主题色
-$color-primary-map: getseriesmap($color-primary);
-$color-success-map: getseriesmap($color-success);
-$color-warning-map: getseriesmap($color-warning);
-$color-danger-map: getseriesmap($color-danger);
-$color-neutral-map: getneutralmap();
+$color-primary-map: get-series-map($color-primary);
+$color-success-map: get-series-map($color-success);
+$color-warning-map: get-series-map($color-warning);
+$color-danger-map: get-series-map($color-danger);
+$color-neutral-map: get-neutral-map();
 
 // 文字色
 $color-text-title: map-get($color-neutral-map, 12) !default;

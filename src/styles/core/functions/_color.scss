@@ -15,11 +15,11 @@ $mix-neutral-percent: 7.6%;
     @return null;
 }
 
-@function generateNeutral($level) {
+@function generate-neutral($level) {
     @return mix($color-black, $color-white, $mix-neutral-percent * $level);
 }
 
-@function getSeriesMap($color) {
+@function get-series-map($color) {
     $color: (light-1: generate($color, light, 1),
     light-2: generate($color, light, 2),
     light-3: generate($color, light, 3),
@@ -35,20 +35,20 @@ $mix-neutral-percent: 7.6%;
     @return $color;
 }
 
-@function getNeutralMap() {
-    $neutral-map: (1: generateneutral(1),
-    2: generateneutral(2),
-    3: generateneutral(3),
-    4: generateneutral(4),
-    5: generateneutral(5),
-    6: generateneutral(6),
-    7: generateneutral(7),
-    8: generateneutral(8),
-    9: generateneutral(9),
-    10: generateneutral(10),
-    11: generateneutral(11),
-    12: generateneutral(12),
-    13: generateneutral(13));
+@function get-neutral-map() {
+    $neutral-map: (1: generate-neutral(1),
+    2: generate-neutral(2),
+    3: generate-neutral(3),
+    4: generate-neutral(4),
+    5: generate-neutral(5),
+    6: generate-neutral(6),
+    7: generate-neutral(7),
+    8: generate-neutral(8),
+    9: generate-neutral(9),
+    10: generate-neutral(10),
+    11: generate-neutral(11),
+    12: generate-neutral(12),
+    13: generate-neutral(13));
 
     @return $neutral-map;
 }
