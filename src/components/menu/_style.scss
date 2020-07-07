@@ -1,0 +1,113 @@
+@include b(menu) {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 30px;
+  list-style: none;
+  border-bottom: $menu-border-width solid $menu-border-color;
+  box-shadow: $menu-box-shadow;
+
+  @include when(horizontal) {
+    .spirit-menu__item {
+      border-bottom: $menu-item-active-border-width solid transparent;
+    }
+
+    .spirit-menu__submenu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      z-index: 100;
+      background: $color-white;
+      border: $menu-border-width solid $menu-border-color;
+      box-shadow: $submenu-box-shadow;
+    }
+  }
+
+  @include when(vertical) {
+    flex-direction: column;
+    margin: 10px 20px;
+    border-right: $menu-border-width solid $menu-border-color;
+    border-bottom: 0;
+
+    .spirit-menu__submenu {
+      border-left: $menu-item-active-border-width solid transparent;
+
+      &.is-active,
+      &:hover {
+        border-bottom: 0;
+        border-left: $menu-item-active-border-width solid $menu-item-active-color;
+      }
+    }
+
+    .arrow-icon {
+      transform: rotate(0deg) !important;
+    }
+  }
+
+  @include when(opened) {
+    .arrow-icon {
+      transform: rotate(180deg) !important;
+    }
+  }
+
+  @include e(item) {
+    padding: $menu-item-padding-y $menu-item-padding-x;
+    cursor: pointer;
+    transition: $menu-transition;
+
+    &:hover,
+    &:focus {
+      color: $menu-item-active-color;
+      text-decoration: none;
+    }
+
+    @include when(disabled) {
+      color: $menu-item-disabled-color;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    @include when(active) {
+      color: $menu-item-active-color;
+      border-bottom: $menu-item-active-border-width solid $menu-item-active-color;
+    }
+  }
+
+  @include e(submenu) {
+    padding-left: 0;
+    white-space: nowrap;
+    list-style: none;
+
+    .spirit-menu__item {
+      padding: $menu-item-padding-y $menu-item-padding-x;
+      color: $body-color;
+      cursor: pointer;
+      transition: $menu-transition;
+
+      &.is-active,
+      &:hover {
+        color: $menu-item-active-color !important;
+      }
+    }
+  }
+
+  @include e(submenu-item) {
+    position: relative;
+
+    @include e(title) {
+      display: flex;
+      align-items: center;
+    }
+
+    .arrow-icon {
+      margin-left: 3px;
+      transition: transform .25s ease-in-out;
+    }
+
+    &:hover {
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
