@@ -1,20 +1,9 @@
-import React, {
-  FC,
-  ButtonHTMLAttributes,
-  AnchorHTMLAttributes,
-  useRef
-} from 'react'
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes, useRef } from 'react'
 import classNames from 'classnames'
 import useWave from '../../hooks/useWave'
 
 export type ButtonSize = 'large' | 'normal' | 'small' | 'mini'
-export type ButtonType =
-  | 'primary'
-  | 'default'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'link'
+export type ButtonType = 'primary' | 'default' | 'success' | 'warning' | 'danger' | 'link'
 
 interface BaseButtonProps {
   className?: string
@@ -35,16 +24,7 @@ type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 export const Button: FC<ButtonProps> = (props: ButtonProps) => {
-  const {
-    className,
-    loading,
-    disabled,
-    size,
-    btnType,
-    children,
-    href,
-    ...restProps
-  } = props
+  const { className, loading, disabled, size, btnType, children, href, ...restProps } = props
 
   const buttonEl = useRef<HTMLButtonElement>(null)
   useWave(buttonEl)
@@ -69,12 +49,7 @@ export const Button: FC<ButtonProps> = (props: ButtonProps) => {
     )
   }
   return (
-    <button
-      ref={buttonEl}
-      className={classes}
-      disabled={disabled}
-      {...restProps}
-    >
+    <button ref={buttonEl} className={classes} disabled={disabled} {...restProps}>
       {children}
     </button>
   )

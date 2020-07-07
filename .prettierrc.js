@@ -1,6 +1,6 @@
 module.exports = {
   endOfLine: "auto",
-  printWidth: 80,
+  printWidth: 100,
   semi: false,
   singleQuote: true,
   trailingComma: 'none',
@@ -8,5 +8,5 @@ module.exports = {
   jsxBracketSameLine: false,
   arrowParens: 'avoid',
   requirePragma: false,
-  proseWrap: 'preserve'
+  proseWrap: 'never'
 }

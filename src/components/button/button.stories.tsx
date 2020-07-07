@@ -10,11 +10,7 @@ const wrapperStyle: React.CSSProperties = {
 const types = () => (
   <>
     <Button onClick={action('default button clicked')}>默认按钮</Button>
-    <Button
-      btnType="primary"
-      className="test"
-      onClick={action('primary button clicked')}
-    >
+    <Button btnType="primary" className="test" onClick={action('primary button clicked')}>
       主要按钮
     </Button>
     <Button btnType="success" onClick={action('success button clicked')}>

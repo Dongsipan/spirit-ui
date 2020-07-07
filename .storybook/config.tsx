@@ -1,6 +1,6 @@
 import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
+import { withInfo } from '@storybook/addon-info'
 
 import '../src/styles/index.scss'
 
